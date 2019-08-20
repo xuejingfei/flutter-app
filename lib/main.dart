@@ -3,6 +3,7 @@ import 'package:flutter_app/SecondScreen.dart';
 
 import 'AppLifeCycleScrren.dart';
 import 'LifeCycleScreen.dart';
+import 'ListViewScreen.dart';
 
 void main() => runApp(MyApp());
 
@@ -78,6 +79,14 @@ class _MyHomePageState extends State<MyHomePage> {
                           context,
                           new MaterialPageRoute(
                               builder: (context) => new AppLifeCycleScreen()))
+                    }),
+            RaisedButton(
+                child: Text('跳转到列表页面'),
+                onPressed: () => {
+                      Navigator.push(
+                          context,
+                          new MaterialPageRoute(
+                              builder: (context) => new ListViewScreen()))
                     })
           ],
         ),
